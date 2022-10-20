@@ -1,0 +1,44 @@
+.arrow {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2px;
+    margin-bottom: 2px;
+}
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.search-bar{
+    border:1.5px solid;
+    border-right: 0px;
+}
+.search-bar:focus{
+    outline: none;
+}
+.dropdown-button{
+    border: 1.5px solid;
+    border-left: 0px;
+    background-color: #ffffff;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 185px;
+    border: 1px solid #ddd;
+    z-index: 1;
+}
+.show-dropdown{
+    display: block;
+}
+.city-display{
+    text-align: center;
+}
+.user-city{
+    cursor: pointer;
+   
+}
+.city{
+    cursor: pointer;
+}

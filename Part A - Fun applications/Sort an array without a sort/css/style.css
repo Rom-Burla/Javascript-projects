@@ -1,0 +1,7 @@
+.display-arrays{
+    margin: 20px;
+display: flex;
+justify-content: space-evenly;
+text-align: center;
+flex-wrap: wrap;
+}

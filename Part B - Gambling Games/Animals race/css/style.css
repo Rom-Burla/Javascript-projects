@@ -1,0 +1,17 @@
+body{
+    overflow-x: hidden;
+}
+#root{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.animal{
+    position: relative;
+    width: 150px;
+    height: 120px;
+    cursor: pointer;
+}
+.animal:active{
+    transform: scale(1.3);
+}

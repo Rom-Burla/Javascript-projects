@@ -1,0 +1,84 @@
+body{
+    text-align: center;
+}
+#root{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    margin: 20px;
+}
+form{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.input-div{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex: 0 1 30%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+.display-color{
+    display: inline-block;
+    margin: 20px;
+    width: 400px;
+    height: 75px;
+}
+
+.color-displays button:first-of-type{
+    margin: auto;
+    /* margin-bottom: 20px; */
+    display: block;
+    text-align: center;
+}
+/* .color-displays label{
+    margin-right: 5px;
+}
+.color-displays input{
+    margin-right: 5px;
+} */
+.first-color-form{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.first-color-form button{
+    flex-basis: 200px;
+}
+.second-color-form{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+.second-color-form button{
+    flex-basis: 200px;
+    background-color: #46044d;
+    
+}
+.favourite-color{
+    display: inline-block;
+    margin: 20px;
+    width: 400px;
+    height: 80px;
+    
+}
