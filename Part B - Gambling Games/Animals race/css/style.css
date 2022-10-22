@@ -3,6 +3,9 @@ body{
     display: flex;
     justify-content: center;
 }
+button{
+    cursor: pointer;
+}
 #root{
     text-align: center;
 }
@@ -110,6 +113,7 @@ body{
 .bet-animal-img{
     width: 75px;
     height: 75px;
+    cursor: pointer;
 }
 .btn-div{
     margin-top: 10px;
