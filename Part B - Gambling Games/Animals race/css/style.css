@@ -65,10 +65,40 @@ body{
     align-items: flex-start;
 }
 .runner{
+    display: flex;
+    
     width: 100px;
     height: 24%;
     background-color: rgba(255, 255, 255, 0.1);
 }
+.voice{
+    transform: translateY(-40px);
+            text-align: center;
+            background-color: #fff;
+            border: 3px solid #333;
+            border-radius: 30px;
+            font-family: sans-serif;
+          display: none;
+}
+.voice::before,.voice::after{
+    content: ' ';
+        position: absolute;
+        width: 0;
+        height: 0;
+}
+        .speech::before {
+        left: 7.5px;
+            bottom: -15px;
+            border: 7.2px solid;
+            border-color: #333 transparent transparent #333;
+        }
+.speech::after{
+    left: 8.5px;
+        bottom: -14px;
+        border: 4.9px solid;
+        border-color: #fff transparent transparent #fff;
+    }
+
 .bet-div{
     margin-top: 20px;
     display: flex;

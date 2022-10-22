@@ -64,11 +64,20 @@ for (const runner in runners) {
   if (Object.hasOwnProperty.call(runners, runner)) {
     // Creating the animals on the racing track
     const animal = runners[runner];
+    let trackAnimalDiv = document.createElement("div");
+    trackAnimalDiv.id = animal.id;
+    trackAnimalDiv.className = "runner";
     let trackAnimal = document.createElement("img");
     trackAnimal.src = animal.img;
-    trackAnimal.className = "runner";
-    trackAnimal.id = animal.id;
-    runnersDiv.appendChild(trackAnimal);
+    trackAnimal.style.width = "inherit";
+    trackAnimal.style.height = "100%";
+    let trackAnimalVoice = document.createElement("p");
+    trackAnimalVoice.textContent = '"' + animal.voice + '"';
+    trackAnimalVoice.className = "voice";
+    trackAnimalVoice.classList.add("speech");
+    trackAnimalDiv.appendChild(trackAnimal);
+    trackAnimalDiv.appendChild(trackAnimalVoice);
+    runnersDiv.appendChild(trackAnimalDiv);
 
     // Creating the animals on the bet section
     let betAnimal = document.createElement("div");
@@ -92,7 +101,7 @@ let betChick = document.getElementById("bet-chick");
 let userOneBet = "";
 let userTwoBet = "";
 let chosen;
-
+let animalVoice = document.querySelectorAll(".voice");
 // Creating a choose animal to bet event
 document.addEventListener("click", (evt) => {
   switch (evt.target.id) {
@@ -198,10 +207,8 @@ betAnimalBtn.addEventListener("click", () => {
   console.log(userOneBet);
   console.log(userTwoBet);
 });
-
+const randVoiceStep = Math.floor(Math.random() * (401 - 250)) + 250;
 startRaceBtn.addEventListener("click", () => {
-  btnDiv.removeChild(betAnimalBtn);
-  btnDiv.removeChild(startRaceBtn);
   announceParagraph.textContent = "Race has been started";
   switch ((userOneBet, userTwoBet)) {
     case "":
@@ -209,6 +216,8 @@ startRaceBtn.addEventListener("click", () => {
         "All players need to place their bets before starting the race";
       break;
     default:
+      btnDiv.removeChild(betAnimalBtn);
+      btnDiv.removeChild(startRaceBtn);
       let runner = document.querySelectorAll(".runner");
       let dogSteps = 0;
       let horseSteps = 0;
@@ -292,6 +301,15 @@ startRaceBtn.addEventListener("click", () => {
                       "</p>";
                   }
                 }
+                let dogBark = new Audio("../Animal Voices/dog.wav");
+                if (dogSteps > randVoiceStep) {
+                  animalVoice[0].style.display = "block";
+                  dogBark.play();
+                  if (dogSteps >= randVoiceStep + 50) {
+                    animalVoice[0].style.display = "none";
+                    dogBark.pause();
+                  }
+                }
               }, Math.floor(Math.random() * (701 - 150)) + 150);
               break;
             case "horse":
@@ -365,6 +383,15 @@ startRaceBtn.addEventListener("click", () => {
                       " is number " +
                       winner +
                       "</p>";
+                  }
+                }
+                let horseNeigh = new Audio("../Animal Voices/horse.wav");
+                if (horseSteps > randVoiceStep) {
+                  animalVoice[1].style.display = "block";
+                  horseNeigh.play();
+                  if (horseSteps >= randVoiceStep + 70) {
+                    animalVoice[1].style.display = "none";
+                    horseNeigh.pause();
                   }
                 }
               }, Math.floor(Math.random() * (1001 - 150)) + 150);
@@ -442,6 +469,15 @@ startRaceBtn.addEventListener("click", () => {
                       "</p>";
                   }
                 }
+                let duckQuack = new Audio("../Animal Voices/duck.mp3");
+                if (duckSteps > randVoiceStep) {
+                  animalVoice[2].style.display = "block";
+                  duckQuack.play();
+                  if (duckSteps >= randVoiceStep + 40) {
+                    animalVoice[2].style.display = "none";
+                    duckQuack.pause();
+                  }
+                }
               }, Math.floor(Math.random() * (601 - 150)) + 150);
               break;
             case "chick":
@@ -515,6 +551,15 @@ startRaceBtn.addEventListener("click", () => {
                       " is number " +
                       winner +
                       "</p>";
+                  }
+                }
+                let chickChirp = new Audio("../Animal Voices/chick.mp3");
+                if (chickSteps > randVoiceStep) {
+                  animalVoice[3].style.display = "block";
+                  chickChirp.play();
+                  if (chickSteps >= randVoiceStep + 30) {
+                    animalVoice[3].style.display = "none";
+                    chickChirp.pause();
                   }
                 }
               }, Math.floor(Math.random() * (401 - 150)) + 100);
