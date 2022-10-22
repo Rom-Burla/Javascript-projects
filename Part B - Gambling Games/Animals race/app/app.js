@@ -234,7 +234,7 @@ startRaceBtn.addEventListener("click", () => {
                   "translateX(" + runners.dog.step + "px)";
                 dogSteps += runners.dog.step;
                 console.log("dog " + dogSteps);
-                if (dogSteps >= 900) {
+                if (dogSteps >= 1100) {
                   clearInterval(dogRacing);
                   winner++;
                   if (winner === 1) {
@@ -318,7 +318,7 @@ startRaceBtn.addEventListener("click", () => {
                   "translateX(" + runners.horse.step + "px)";
                 horseSteps += runners.horse.step;
                 console.log("horse" + horseSteps);
-                if (horseSteps >= 900) {
+                if (horseSteps >= 1100) {
                   clearInterval(horseRacing);
                   winner++;
                   if (winner === 1) {
@@ -402,7 +402,7 @@ startRaceBtn.addEventListener("click", () => {
                   "translateX(" + runners.duck.step + "px)";
                 duckSteps += runners.duck.step;
                 console.log("duck " + duckSteps);
-                if (duckSteps >= 900) {
+                if (duckSteps >= 1100) {
                   clearInterval(duckRacing);
                   winner++;
                   if (winner === 1) {
@@ -486,7 +486,7 @@ startRaceBtn.addEventListener("click", () => {
                   "translateX(" + runners.chick.step + "px)";
                 chickSteps += runners.chick.step;
                 console.log("chick " + chickSteps);
-                if (chickSteps >= 900) {
+                if (chickSteps >= 1100) {
                   clearInterval(chickRacing);
                   winner++;
                   if (winner === 1) {
